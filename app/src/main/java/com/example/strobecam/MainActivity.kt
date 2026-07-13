@@ -67,7 +67,8 @@ class MainActivity : AppCompatActivity() {
 
         sbHz.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                val hz = if (progress < 1) 1 else progress
+                // Divide by 10.0 to turn an integer like 25 into 2.5 Hz
+                val hz = if (progress < 1) 0.1 else progress / 10.0
                 frequencyHz = hz
                 tvHz.text = "Frequency: $hz Hz"
             }
