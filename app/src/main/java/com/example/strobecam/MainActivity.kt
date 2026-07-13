@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                 captureSession?.setRepeatingRequest(previewRequestBuilder.build(), null, null)
             } catch (e: Exception) { e.printStackTrace() }
             
-            val delay = (1000 / (2 * frequencyHz)).toLong()
+            val delay = (1000.0 / (2.0 * frequencyHz)).toLong()
             strobeHandler.postDelayed(this, delay)
         }
     }
