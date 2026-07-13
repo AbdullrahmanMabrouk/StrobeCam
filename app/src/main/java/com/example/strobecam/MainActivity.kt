@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var previewRequestBuilder: CaptureRequest.Builder
 
     private var isStrobeActive = false
-    private var frequencyHz = 5
+    private var frequencyHz = 5.0 // Changed from 5 to 5.0
     private val strobeHandler = Handler(Looper.getMainLooper())
     private var isFlashOn = false
 
