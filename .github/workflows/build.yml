@@ -17,8 +17,10 @@ jobs:
           java-version: '17'
           distribution: 'zulu'
 
-      - name: Setup Setup-Gradle System
+      - name: Setup Gradle 8.5
         uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.5' # This forces the cloud to use a version compatible with our app
 
       - name: Build Debug APK via Cloud Compiler
         run: gradle assembleDebug
